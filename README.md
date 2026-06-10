@@ -3,8 +3,6 @@
 **Other AI agents write code.  
 ZIOM decides if it should be written at all.**
 
-> ZIOM, formerly Agentor. Public branding is ZIOM-first; technical names such as the current `agentor` CLI, `AGENTOR_*` environment variables, repository paths, and installer URLs remain unchanged until a dedicated technical migration is approved.
-
 <p align="center">
   <a href="#install"><img alt="Install" src="https://img.shields.io/badge/install-one%20command-black?style=for-the-badge"></a>
   <a href="#providers"><img alt="Providers" src="https://img.shields.io/badge/models-5%20providers-blue?style=for-the-badge"></a>
@@ -22,7 +20,7 @@ It studies the request, weighs trade-offs, builds a plan, and only then moves to
 > Demo GIF / asciicast coming soon.
 
 ```bash
-agentor plan "build a REST API for user authentication"
+ziom plan "build a REST API for user authentication"
 ```
 
 Example output:
@@ -49,7 +47,7 @@ Risks to address before code:
   - Migration path for future social login
 
 Next:
-  agentor apply
+  ziom apply
 ```
 
 ---
@@ -64,26 +62,24 @@ Next:
 
 ## Install
 
-The public brand is ZIOM. The current technical distribution still uses the legacy `agentor` command and installer until the CLI/distribution migration is separately approved.
-
 ### macOS, Linux, Windows via WSL
 
 ```bash
-curl -fsSL https://install.agentor.dev | sh
+curl -fsSL https://install.ziom.dev | sh
 ```
 
 ### Manual install
 
 ```bash
-git clone https://github.com/agentor/agentor
-cd agentor
+git clone https://github.com/pascaniodeb/ziom
+cd ziom
 ./install.sh
 ```
 
 Verify installation:
 
 ```bash
-agentor --version
+ziom --version
 ```
 
 ---
@@ -91,9 +87,9 @@ agentor --version
 ## Quickstart
 
 ```bash
-agentor init
-agentor plan "build a REST API for user authentication"
-agentor apply
+ziom init
+ziom plan "build a REST API for user authentication"
+ziom apply
 ```
 
 Expected first run:
@@ -119,7 +115,7 @@ What ZIOM will do:
   4. Ask for confirmation before writing code.
 
 Run:
-  agentor apply
+  ziom apply
 ```
 
 ---
@@ -196,7 +192,7 @@ Create a `.env` file in your project root:
 
 ```bash
 # Choose provider order
-AGENTOR_PROVIDER_ORDER=anthropic,gemini,groq,openrouter,ollama
+ZIOM_PROVIDER_ORDER=anthropic,gemini,groq,openrouter,ollama
 
 # Cloud providers
 ANTHROPIC_API_KEY=
@@ -208,26 +204,24 @@ OPENROUTER_API_KEY=
 OLLAMA_BASE_URL=http://localhost:11434
 
 # Model behavior
-AGENTOR_LLM_TIMEOUT=120
+ZIOM_LLM_TIMEOUT=120
 ```
 
 Example local-only setup:
 
 ```bash
-AGENTOR_PROVIDER_ORDER=ollama
+ZIOM_PROVIDER_ORDER=ollama
 OLLAMA_BASE_URL=http://localhost:11434
 ```
 
 Example fast cloud setup:
 
 ```bash
-AGENTOR_PROVIDER_ORDER=groq,gemini,anthropic
+ZIOM_PROVIDER_ORDER=groq,gemini,anthropic
 GROQ_API_KEY=...
 GEMINI_API_KEY=...
 ANTHROPIC_API_KEY=...
 ```
-
-`AGENTOR_*` keys remain the current technical configuration surface. A future `ZIOM_*` compatibility layer requires a separate implementation approval.
 
 ---
 
@@ -244,6 +238,6 @@ Public social channel: coming soon.
 
 ## License
 
-The ZIOM CLI, currently distributed as `agentor`, is MIT licensed.
+The ZIOM CLI is MIT licensed.
 
 The core engine is proprietary.
