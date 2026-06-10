@@ -1,7 +1,9 @@
-# AGENTOR
+# ZIOM
 
 **Other AI agents write code.  
-AGENTOR decides if it should be written at all.**
+ZIOM decides if it should be written at all.**
+
+> ZIOM, formerly Agentor. Public branding is ZIOM-first; technical names such as the current `agentor` CLI, `AGENTOR_*` environment variables, repository paths, and installer URLs remain unchanged until a dedicated technical migration is approved.
 
 <p align="center">
   <a href="#install"><img alt="Install" src="https://img.shields.io/badge/install-one%20command-black?style=for-the-badge"></a>
@@ -9,7 +11,7 @@ AGENTOR decides if it should be written at all.**
   <a href="#license"><img alt="License" src="https://img.shields.io/badge/CLI-MIT-green?style=for-the-badge"></a>
 </p>
 
-AGENTOR is a coding agent for teams that want speed without handing architectural control to autocomplete.
+ZIOM is a coding agent for teams that want speed without handing architectural control to autocomplete.
 
 It studies the request, weighs trade-offs, builds a plan, and only then moves toward code.
 
@@ -26,7 +28,7 @@ agentor plan "build a REST API for user authentication"
 Example output:
 
 ```text
-AGENTOR
+ZIOM
 Analyzing request...
 
 ✓ Architecture reviewed
@@ -52,15 +54,17 @@ Next:
 
 ---
 
-## Why AGENTOR
+## Why ZIOM
 
-- **It plans before it writes.** Other AI coding agents optimize for first draft speed. AGENTOR optimizes for decisions you can defend later.
+- **It plans before it writes.** Other AI coding agents optimize for first draft speed. ZIOM optimizes for decisions you can defend later.
 - **It catches trade-offs early.** Security, performance, cost, and maintainability are considered before the first file changes.
-- **It gets better inside your repo.** AGENTOR learns the patterns, constraints, and recurring decisions in your codebase.
+- **It gets better inside your repo.** ZIOM learns the patterns, constraints, and recurring decisions in your codebase.
 
 ---
 
 ## Install
+
+The public brand is ZIOM. The current technical distribution still uses the legacy `agentor` command and installer until the CLI/distribution migration is separately approved.
 
 ### macOS, Linux, Windows via WSL
 
@@ -95,7 +99,7 @@ agentor apply
 Expected first run:
 
 ```text
-AGENTOR initialized.
+ZIOM initialized.
 
 Project profile created.
 Model provider detected.
@@ -108,7 +112,7 @@ After planning:
 ```text
 Plan ready.
 
-What AGENTOR will do:
+What ZIOM will do:
   1. Define the user-facing behavior.
   2. Identify risks and edge cases.
   3. Propose the smallest safe implementation path.
@@ -132,11 +136,11 @@ Use Ollama when you want local execution or need to work without network access.
 
 ### Learns from your codebase
 
-AGENTOR remembers project conventions, recurring patterns, and prior decisions so future work starts with context.
+ZIOM remembers project conventions, recurring patterns, and prior decisions so future work starts with context.
 
 ### Never writes code without a plan
 
-Before modifying files, AGENTOR explains the approach, risks, and expected outcome.
+Before modifying files, ZIOM explains the approach, risks, and expected outcome.
 
 ### Designed for real teams
 
@@ -168,7 +172,7 @@ Supported providers:
 
 ## Requirements
 
-AGENTOR supports:
+ZIOM supports:
 
 - macOS
 - Linux
@@ -223,6 +227,8 @@ GEMINI_API_KEY=...
 ANTHROPIC_API_KEY=...
 ```
 
+`AGENTOR_*` keys remain the current technical configuration surface. A future `ZIOM_*` compatibility layer requires a separate implementation approval.
+
 ---
 
 ## Contributing
@@ -232,12 +238,12 @@ We're building in public.
 Star the repo and watch for our first public release.
 
 Discord: coming soon.  
-𝕏 Follow @agentor_dev for updates.
+Public social channel: coming soon.
 
 ---
 
 ## License
 
-The AGENTOR CLI is MIT licensed.
+The ZIOM CLI, currently distributed as `agentor`, is MIT licensed.
 
 The core engine is proprietary.
