@@ -87,4 +87,11 @@ if [ -x "$INSTALL_DIR/$BIN_NAME" ]; then
   echo "✓ Version check: $VERSION_OUTPUT"
 fi
 
-echo "✓ ZIOM CLI installed at $INSTALL_DIR/$BIN_NAME"
+echo ""
+echo "✓ ZIOM v${VERSION} installed successfully"
+echo ""
+echo "Get started:"
+echo "  ziom init"
+echo ""
+echo "Documentation: https://ziom.dev/docs"
+echo "GitHub: https://github.com/pascaniodeb/ziom"
