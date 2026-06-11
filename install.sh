@@ -88,7 +88,8 @@ if [ -x "$INSTALL_DIR/$BIN_NAME" ]; then
 fi
 
 echo ""
-echo "✓ ZIOM v${VERSION} installed successfully"
+INSTALLED_VERSION=$("$INSTALL_DIR/$BIN_NAME" --version 2>/dev/null || echo "unknown")
+echo "✓ $INSTALLED_VERSION installed successfully"
 echo ""
 echo "Get started:"
 echo "  ziom init"
